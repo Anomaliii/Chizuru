@@ -9,10 +9,10 @@ from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async, CallbackContext
 from telegram.error import BadRequest, Unauthorized, RetryAfter
 
-from lynda import dispatcher, AI_API_KEY, OWNER_ID
-import lynda.modules.sql.chatbot_sql as sql
-from lynda.modules.helper_funcs.chat_status import user_admin
-from lynda.modules.helper_funcs.filters import CustomFilters
+from chizuru import dispatcher, AI_API_KEY, OWNER_ID
+import chizuru.modules.sql.chatbot_sql as sql
+from chizuru.modules.helper_funcs.chat_status import user_admin
+from chizuru.modules.helper_funcs.filters import CustomFilters
 
 CoffeeHouseAPI = API(AI_API_KEY)
 api_client = LydiaAI(CoffeeHouseAPI)
@@ -50,7 +50,7 @@ def remove_chat(update: Update, _):
 
 def check_message(context: CallbackContext, message):
     reply_msg = message.reply_to_message
-    if message.text.lower() == "lynda":
+    if message.text.lower() == "chizuru":
         return True
     if reply_msg:
         if reply_msg.from_user.id == 1149336653:
@@ -112,8 +112,8 @@ def list_chatbot(update: Update, context: CallbackContext):
 __mod_name__ = "Chatbot"
 
 __help__ = """
-Chatbot utilizes the CoffeeHouse API and allows Lynda to talk back making your chat more interactive.
-This is an ongoing upgrade and is only available in your chats if you reach out to @YorktownEagleUnion and ask for it.
+Chatbot utilizes the CoffeeHouse API and allows Chizuru to talk back making your chat more interactive.
+This is an ongoing upgrade and is only available in your chats and ask for it.
 In future we might make it open for any chat and controllable by group admins.
 Powered by CoffeeHouse (https://coffeehouse.intellivoid.net/) from @Intellivoid
 
