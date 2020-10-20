@@ -6,10 +6,10 @@ from telegram.error import BadRequest
 from telegram.ext import MessageHandler, CommandHandler, Filters, run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from lynda import dispatcher, WHITELIST_USERS, SARDEGNA_USERS
-from lynda.modules.helper_funcs.chat_status import is_user_admin, user_admin, can_restrict, connection_status
-from lynda.modules.log_channel import loggable
-from lynda.modules.sql import antiflood_sql as sql
+from chizuru import dispatcher, WHITELIST_USERS, SARDEGNA_USERS
+from chizuru.modules.helper_funcs.chat_status import is_user_admin, user_admin, can_restrict, connection_status
+from chizuru.modules.log_channel import loggable
+from chizuru.modules.sql import antiflood_sql as sql
 
 FLOOD_GROUP = 3
 
