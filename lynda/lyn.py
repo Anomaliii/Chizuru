@@ -1,8 +1,8 @@
 from telethon import events
-from lynda import telethn
+from chizuru import telethn
 
 """Triggers start command in pm and in groupchats"""
-def lyndabot(**args):
+def chizurubot(**args):
     """New message."""
     pattern = args.get('pattern', None)
     r_pattern = r'^[/!]'
