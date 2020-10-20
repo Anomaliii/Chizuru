@@ -7,11 +7,11 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-import lynda.modules.sql.blacklistusers_sql as sql
-from lynda import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, WHITELIST_USERS, SUPPORT_USERS
-from lynda.modules.helper_funcs.chat_status import dev_plus
-from lynda.modules.helper_funcs.extraction import extract_user_and_text, extract_user
-from lynda.modules.log_channel import gloggable
+import chizuru.modules.sql.blacklistusers_sql as sql
+from chizuru import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, WHITELIST_USERS, SUPPORT_USERS
+from chizuru.modules.helper_funcs.chat_status import dev_plus
+from chizuru.modules.helper_funcs.extraction import extract_user_and_text, extract_user
+from chizuru.modules.log_channel import gloggable
 
 BLACKLISTWHITELIST = [OWNER_ID] + DEV_USERS + \
     SUDO_USERS + WHITELIST_USERS + SUPPORT_USERS
