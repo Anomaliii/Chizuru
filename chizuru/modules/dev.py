@@ -7,8 +7,8 @@ from typing import List
 from telegram import Update, TelegramError
 from telegram.ext import CommandHandler, run_async, CallbackContext
 
-from lynda import dispatcher
-from lynda.modules.helper_funcs.chat_status import dev_plus
+from chizuru import dispatcher
+from chizuru.modules.helper_funcs.chat_status import dev_plus
 
 
 @run_async
