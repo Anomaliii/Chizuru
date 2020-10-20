@@ -3,14 +3,15 @@ import random
 from telegram import Update, MessageEntity
 from telegram.ext import Filters, run_async, CallbackContext
 
-from lynda import dispatcher
-from lynda.modules.disable import (
+from chizuru
+import dispatcher
+from chizuru.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleRegexHandler,
     DisableAbleMessageHandler,
 )
-from lynda.modules.sql import afk_sql as sql
-from lynda.modules.users import get_user_id
+from chizuru.modules.sql import afk_sql as sql
+from chizuru.modules.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
