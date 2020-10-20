@@ -86,7 +86,7 @@ if ENV:
     SW_API = os.environ.get('SW_API', None)
 
 else:
-    from lynda.config import Development as Config
+    from chizuru.config import Development as Config
 
     TOKEN = Config.TOKEN
 
@@ -151,7 +151,7 @@ else:
 SUDO_USERS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 
-telethn = TelegramClient("lynda", API_ID, API_HASH)
+telethn = TelegramClient("chizuru", API_ID, API_HASH)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 dispatcher = updater.dispatcher
 
@@ -173,7 +173,7 @@ else:
         spam_watch = None
 
 # Load at end to ensure all prev variables have been set
-from lynda.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler
+from chizuru.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler
 
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
