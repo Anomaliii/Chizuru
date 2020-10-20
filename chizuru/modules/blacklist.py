@@ -6,12 +6,12 @@ from telegram import Update, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async, CallbackContext
 
-import lynda.modules.sql.blacklist_sql as sql
-from lynda import dispatcher, LOGGER
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import user_admin, user_not_admin, connection_status
-from lynda.modules.helper_funcs.extraction import extract_text
-from lynda.modules.helper_funcs.misc import split_message
+import chizuru.modules.sql.blacklist_sql as sql
+from chizuru import dispatcher, LOGGER
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import user_admin, user_not_admin, connection_status
+from chizuru.modules.helper_funcs.extraction import extract_text
+from chizuru.modules.helper_funcs.misc import split_message
 
 BLACKLIST_GROUP = 11
 
