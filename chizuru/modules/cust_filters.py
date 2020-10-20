@@ -7,14 +7,14 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async, CallbackContext
 from telegram.utils.helpers import escape_markdown
 
-from lynda import dispatcher, LOGGER
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import user_admin, connection_status
-from lynda.modules.helper_funcs.extraction import extract_text
-from lynda.modules.helper_funcs.filters import CustomFilters
-from lynda.modules.helper_funcs.misc import build_keyboard
-from lynda.modules.helper_funcs.string_handling import split_quotes, button_markdown_parser
-from lynda.modules.sql import cust_filters_sql as sql
+from chizuru import dispatcher, LOGGER
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import user_admin, connection_status
+from chizuru.modules.helper_funcs.extraction import extract_text
+from chizuru.modules.helper_funcs.filters import CustomFilters
+from chizuru.modules.helper_funcs.misc import build_keyboard
+from chizuru.modules.helper_funcs.string_handling import split_quotes, button_markdown_parser
+from chizuru.modules.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 
@@ -225,11 +225,11 @@ def reply_filter(update: Update, context: CallbackContext):
                         message.reply_text(
                             "You seem to be trying to use an unsupported url protocol. Telegram "
                             "doesn't support buttons for some protocols, such as tg://. Please try "
-                            "again, or ask @LyndaEagleSupport for help.")
+                            "again, or ask my master for help.")
                     else:
                         message.reply_text(
                             "This note could not be sent, as it is incorrectly formatted. Ask in "
-                            "@LyndaEagleSupport if you can't figure out why!")
+                            "my master if you can't figure out why!")
                         LOGGER.warning(
                             "Message %s could not be parsed", str(
                                 filt.reply))
