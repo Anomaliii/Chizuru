@@ -5,10 +5,10 @@ from typing import List
 from telegram import Update, ParseMode
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async, CallbackContext
 
-from lynda import ALLOW_EXCL, dispatcher, CustomCommandHandler
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import user_admin, bot_can_delete, dev_plus, connection_status
-from lynda.modules.sql import cleaner_sql as sql
+from chizuru import ALLOW_EXCL, dispatcher, CustomCommandHandler
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import user_admin, bot_can_delete, dev_plus, connection_status
+from chizuru.modules.sql import cleaner_sql as sql
 
 CMD_STARTERS = ('/', '!') if ALLOW_EXCL else '/'
 BLUE_TEXT_CLEAN_GROUP = 15
