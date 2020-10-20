@@ -5,9 +5,9 @@ from telegram import Update
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, CallbackContext
 
-from lynda import dispatcher, LOGGER
-from lynda.__main__ import DATA_IMPORT
-from lynda.modules.helper_funcs.chat_status import user_admin
+from chizuru import dispatcher, LOGGER
+from chizuru.__main__ import DATA_IMPORT
+from chizuru.modules.helper_funcs.chat_status import user_admin
 
 
 @run_async
