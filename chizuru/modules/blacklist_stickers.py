@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackContext
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html, mention_markdown
-from lynda.modules.helper_funcs.string_handling import extract_time
+from chizuru.modules.helper_funcs.string_handling import extract_time
 
-import lynda.modules.sql.blsticker_sql as sql
-from lynda import dispatcher, LOGGER
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import user_not_admin, user_admin
-from lynda.modules.helper_funcs.misc import split_message
-from lynda.modules.warns import warn
-from lynda.modules.log_channel import loggable
-from lynda.modules.connection import connected
+import chizuru.modules.sql.blsticker_sql as sql
+from chizuru import dispatcher, LOGGER
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import user_not_admin, user_admin
+from chizuru.modules.helper_funcs.misc import split_message
+from chizuru.modules.warns import warn
+from chizuru.modules.log_channel import loggable
+from chizuru.modules.connection import connected
 
-from lynda.modules.helper_funcs.alternate import send_message
+from chizuru.modules.helper_funcs.alternate import send_message
 
 
 @run_async
