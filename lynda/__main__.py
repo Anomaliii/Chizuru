@@ -9,28 +9,28 @@ from telegram.ext import CallbackContext, CommandHandler, MessageHandler, Callba
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 
-from lynda import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, \
+from chizuru import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, \
     ALLOW_EXCL, telethn
 
-from lynda.modules import ALL_MODULES
-from lynda.modules.helper_funcs.chat_status import is_user_admin
-from lynda.modules.helper_funcs.misc import paginate_modules
+from chizuru.modules import ALL_MODULES
+from chizuru.modules.helper_funcs.chat_status import is_user_admin
+from chizuru.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 Hi {}, my name is {}!
 // I am an Anime themed group management bot with a lot of Special Features.
 You can find the list of available commands with /help.
 ==========================
--> [Lynda's Repo](https://waa.ai/Lynda)
--> Report [Lynda Support](https://t.me/LyndaEagleSupport) if I go offline
+-> [Chizuru's Repo](https://github.com/Yashiro-San/Chizuru)
+-> Report [Chizuru Support](https://t.me/joinchat/MCPZ_li6GFtEIh5OcvOOsA) if I go offline
 ==========================
-`Maintained by` @YorktownEagleUnion
+`Maintained by` @Yashiro404
 
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a part of Eagle Union.
+I'm a part of Rent a Girlfriend.
 Have a look at the following for an idea of some of \
 the things I can help you with.
 
@@ -49,12 +49,12 @@ will redirect you to pm, with all that chat's settings.
 {}
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with `/` or `!`.\n")
 
-LYNDA_IMG = "https://telegra.ph/file/aa808a7a26a011cdf613e.jpg"
+CHIZURU_IMG = "https://telegra.ph/file/aa808a7a26a011cdf613e.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Lynda is hosted on one of Digital Ocean Servers. \
+Chizuru is hosted on one of Heroku Servers. \
 You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+There are two ways of supporting him; use OVO or Dana +6285397889676."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -68,7 +68,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("lynda.modules." + module_name)
+    imported_module = importlib.import_module("chizuru.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -144,13 +144,14 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="👥 Add Lynda to your group", url="https://t.me/LyndaRobot?startgroup=new")],
-                [InlineKeyboardButton(text="🙋 Support Group", url="https://t.me/LyndaEagleSupport"),
-                InlineKeyboardButton(text="🚫 Global Logs", url="https://t.me/LyndaGLogs")],
-                [InlineKeyboardButton(text="❔ Help", url="https://t.me/LyndaRobot?start=help"),
+                [[InlineKeyboardButton(text="👥 Add 
+                                       to your group", url="https://t.me/ChizuruChanBot?startgroup=new")],
+                [InlineKeyboardButton(text="🙋 Support Group", url="https://t.me/joinchat/MCPZ_li6GFtEIh5OcvOOsA"),
+                InlineKeyboardButton(text="🚫 Global Logs", url="https://t.me/ChizuruGbanLog")],
+                [InlineKeyboardButton(text="❔ Help", url="https://t.me/ChizuruChanBot?start=help"),
                 InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/LyndaUpdateLogs")]])
             update.effective_message.reply_photo(
-                LYNDA_IMG,
+                CHIZURU_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
                     escape_markdown(
