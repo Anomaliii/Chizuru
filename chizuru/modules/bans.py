@@ -6,9 +6,9 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters, run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from lynda import dispatcher, LOGGER, DEV_USERS, SUDO_USERS, SARDEGNA_USERS, BAN_STICKER
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import (
+from chizuru import dispatcher, LOGGER, DEV_USERS, SUDO_USERS, SARDEGNA_USERS, BAN_STICKER
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import (
     bot_admin,
     user_admin,
     is_user_ban_protected,
@@ -16,9 +16,9 @@ from lynda.modules.helper_funcs.chat_status import (
     is_user_admin,
     is_user_in_chat,
     connection_status)
-from lynda.modules.helper_funcs.extraction import extract_user_and_text
-from lynda.modules.helper_funcs.string_handling import extract_time
-from lynda.modules.log_channel import loggable, gloggable
+from chizuru.modules.helper_funcs.extraction import extract_user_and_text
+from chizuru.modules.helper_funcs.string_handling import extract_time
+from chizuru.modules.log_channel import loggable, gloggable
 
 
 @run_async
@@ -33,7 +33,7 @@ def banme(update: Update, context: CallbackContext):
         response_message = "lmao have a load of ban UwU!"
     except Exception as e:
         print(e)
-        response_message = "Ohno! something is not right please contact @LyndaEagleSupport"
+        response_message = "Ohno! something is not right please contact my master"
     message.reply_text(response_message)
 
 
