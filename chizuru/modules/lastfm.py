@@ -5,10 +5,10 @@ import requests
 from telegram import Update, ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import run_async, CommandHandler, CallbackContext
 
-from lynda import dispatcher, LASTFM_API_KEY
-from lynda.modules.disable import DisableAbleCommandHandler
+from chizuru import dispatcher, LASTFM_API_KEY
+from chizuru.modules.disable import DisableAbleCommandHandler
 
-import lynda.modules.sql.last_fm_sql as sql
+import chizuru.modules.sql.last_fm_sql as sql
 
 
 @run_async
