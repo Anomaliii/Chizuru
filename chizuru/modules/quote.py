@@ -1,5 +1,5 @@
 # Oringinal Source from Nicegrill: https://github.com/erenmetesar/NiceGrill/
-# Ported to Lynda by: @pokurt
+# Ported to lynda by: @pokurt
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from telethon.tl import types, functions
 from fontTools.ttLib import TTFont 
@@ -12,7 +12,7 @@ import random
 import json
 import os
 import re
-from lynda.lyn import lyndabot
+from chizuru.lyn import chizurubot
 
 COLORS = [
     "#F07975", "#F49F69", "#F9C84A", "#8CC56E", "#6CC7DC", "#80C1FA", "#BCB3F9", "#E181AC"]
@@ -374,7 +374,7 @@ async def replied_user(draw, tot, text, maxlength, title):
                 draw.text((180 + space, 132), letter, font=textfont, fill="white")
                 space += textfont.getsize(letter)[0]
                 
-@lyndabot(pattern="^/q")
+@chizurubot(pattern="^/q")
 async def _(event):
     if event.fwd_from:
         return
