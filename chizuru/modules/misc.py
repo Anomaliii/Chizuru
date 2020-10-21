@@ -9,12 +9,12 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, Filters, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from lynda import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, SARDEGNA_USERS, WHITELIST_USERS
-from lynda.__main__ import STATS, USER_INFO, TOKEN
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import user_admin, sudo_plus
-from lynda.modules.helper_funcs.extraction import extract_user
-import lynda.modules.sql.users_sql as sql
+from chizuru import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, SARDEGNA_USERS, WHITELIST_USERS
+from chizuru.__main__ import STATS, USER_INFO, TOKEN
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import user_admin, sudo_plus
+from chizuru.modules.helper_funcs.extraction import extract_user
+import chizuru.modules.sql.users_sql as sql
 
 MARKDOWN_HELP = f"""
 Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
@@ -145,21 +145,6 @@ def info(update: Update, context: CallbackContext):
                 text += f"\nThis user holds the title <b>{custom_title}</b> here."
     except BadRequest:
         pass
-
-
-    if user.id == OWNER_ID:
-            text += f'\nThe Nation level of this person is <a href="https://t.me/lyndarobot?start=nations">God</a>'
-    elif user.id in DEV_USERS:
-            text += f'\nThe Nation level of this person is <a href="https://t.me/lyndarobot?start=nations">Hero Union</a>'
-    elif user.id in SUDO_USERS:
-            text += f'\nThe Nation level of this person is <a href="https://t.me/lyndarobot?start=nations">Royal</a>'
-    elif user.id in SUPPORT_USERS:
-            text += f'\nThe Nation level of this person is <a href="https://t.me/lyndarobot?start=nations">Sakura</a>'
-    elif user.id in SARDEGNA_USERS:
-            text += f'\nThe Nation level of this person is <a href="https://t.me/lyndarobot?start=nations">Sardegna</a>'
-    elif user.id in WHITELIST_USERS:
-            text += f'\nThe Nation level of this person is <a href="https://t.me/lyndarobot?start=nations">Neptunia</a>'
-
 
     text += "\n"
     for mod in USER_INFO:
