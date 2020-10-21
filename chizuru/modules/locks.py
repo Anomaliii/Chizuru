@@ -9,20 +9,20 @@ from telegram.utils.helpers import mention_html
 
 from alphabet_detector import AlphabetDetector
 
-import lynda.modules.sql.locks_sql as sql
-from lynda import dispatcher, SUDO_USERS, LOGGER
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import (
+import chizuru.modules.sql.locks_sql as sql
+from chizuru import dispatcher, SUDO_USERS, LOGGER
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import (
     can_delete,
     is_user_admin,
     user_not_admin,
     is_bot_admin,
     user_admin,
 )
-from lynda.modules.log_channel import loggable
-from lynda.modules.connection import connected
+from chizuru.modules.log_channel import loggable
+from chizuru.modules.connection import connected
 
-from lynda.modules.helper_funcs.alternate import send_message, typing_action
+from chizuru.modules.helper_funcs.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 
