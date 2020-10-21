@@ -15,11 +15,11 @@ from pathlib import Path
 from telegram import Update, ParseMode, Message
 from telegram.ext import run_async, CallbackContext
 
-import lynda.modules.fun_strings as fun_strings
-from lynda import dispatcher
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import is_user_admin
-from lynda.modules.helper_funcs.extraction import extract_user
+import chizuru.modules.fun_strings as fun_strings
+from chizuru import dispatcher
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import is_user_admin
+from chizuru.modules.helper_funcs.extraction import extract_user
 
 
 @run_async
@@ -32,7 +32,7 @@ def slap(update: Update, context: CallbackContext):
     user_id = extract_user(message, args)
 
     if user_id == context.bot.id:
-        temp = random.choice(fun_strings.SLAP_LYNDA_TEMPLATES)
+        temp = random.choice(fun_strings.SLAP_CHIZURU_TEMPLATES)
 
         if isinstance(temp, list):
             if temp[2] == "tmute":
