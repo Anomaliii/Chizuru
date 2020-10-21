@@ -9,8 +9,8 @@ from telegram.error import BadRequest, TelegramError
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-import lynda.modules.sql.global_bans_sql as sql
-from lynda import (
+import chizuru.modules.sql.global_bans_sql as sql
+from chizuru import (
     dispatcher,
     OWNER_ID,
     SUDO_USERS,
@@ -22,10 +22,10 @@ from lynda import (
     GBAN_LOGS,
     spam_watch
 )
-from lynda.modules.helper_funcs.chat_status import user_admin, is_user_admin, support_plus
-from lynda.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from lynda.modules.helper_funcs.misc import send_to_list
-from lynda.modules.sql.users_sql import get_all_chats
+from chizuru.modules.helper_funcs.chat_status import user_admin, is_user_admin, support_plus
+from chizuru.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from chizuru.modules.helper_funcs.misc import send_to_list
+from chizuru.modules.sql.users_sql import get_all_chats
 
 GBAN_ENFORCE_GROUP = 6
 
@@ -482,12 +482,12 @@ def __chat_settings__(chat_id, _user_id):
 __help__ = """
 ──「 *Admin only:* 」──
 -> `/gbanstat`
-Note: You can appeal gbans or ask gbans at @LyndaEagleSupport
-Lynda also integrates @Spamwatch API into gbans to remove Spammers as much as possible from your chatroom!
+Note: You can appeal gbans or ask gbans at my master.
+Chizuru also integrates @Spamwatch API into gbans to remove Spammers as much as possible from your chatroom!
 
 ──「 *What is SpamWatch?* 」──
 SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters[.](https://telegra.ph/file/ac12a2c6b831dd005015b.jpg)
-Lynda will constantly help banning spammers off from your group automatically So, you don't have to worry about spammers storming your group.
+Chizuru will constantly help banning spammers off from your group automatically So, you don't have to worry about spammers storming your group.
 """
 
 GBAN_HANDLER = CommandHandler("gban", gban, pass_args=True)
