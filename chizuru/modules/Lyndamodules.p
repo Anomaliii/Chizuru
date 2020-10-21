@@ -3,8 +3,8 @@ import importlib
 from telegram import Update, ParseMode
 from telegram.ext import CommandHandler, run_async
 
-from lynda import dispatcher
-from lynda.__main__ import (
+from chizuru import dispatcher
+from chizuru.__main__ import (
     IMPORTED,
     HELPABLE,
     MIGRATEABLE,
@@ -14,7 +14,7 @@ from lynda.__main__ import (
     DATA_EXPORT,
     CHAT_SETTINGS,
     USER_SETTINGS)
-from lynda.modules.helper_funcs.chat_status import sudo_plus, dev_plus
+from chizuru.modules.helper_funcs.chat_status import sudo_plus, dev_plus
 
 
 @run_async
@@ -27,7 +27,7 @@ def load(update: Update, _):
         parse_mode=ParseMode.HTML)
 
     try:
-        imported_module = importlib.import_module("lynda.modules." + text)
+        imported_module = importlib.import_module("chizuru.modules." + text)
     except Exception:
         load_messasge.edit_text("Does that module even exist?")
         return
@@ -93,7 +93,7 @@ def unload(update: Update, _):
         parse_mode=ParseMode.HTML)
 
     try:
-        imported_module = importlib.import_module("lynda.modules." + text)
+        imported_module = importlib.import_module("chizuru.modules." + text)
     except Exception:
         unload_messasge.edit_text("Does that module even exist?")
         return
@@ -159,7 +159,7 @@ def listmodules(update: Update, _):
     for helpable_module in HELPABLE:
         helpable_module_info = IMPORTED[helpable_module]
         file_info = IMPORTED[helpable_module_info.__mod_name__.lower()]
-        file_name = file_info.__name__.rsplit("lynda.modules.", 1)[1]
+        file_name = file_info.__name__.rsplit("chizuru.modules.", 1)[1]
         mod_name = file_info.__mod_name__
         module_list.append(f'- <code>{mod_name} ({file_name})</code>\n')
     module_list = "Following modules are loaded : \n\n" + ''.join(module_list)
