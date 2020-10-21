@@ -7,12 +7,12 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from lynda import dispatcher, LOGGER, SARDEGNA_USERS
-from lynda.modules.helper_funcs.chat_status import (
+from chizuru import dispatcher, LOGGER, SARDEGNA_USERS
+from chizuru.modules.helper_funcs.chat_status import (
     bot_admin, user_admin, is_user_admin, can_restrict, connection_status)
-from lynda.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from lynda.modules.helper_funcs.string_handling import extract_time
-from lynda.modules.log_channel import loggable
+from chizuru.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from chizuru.modules.helper_funcs.string_handling import extract_time
+from chizuru.modules.log_channel import loggable
 
 
 def check_user(user_id: int, context: CallbackContext, chat: Chat) -> Optional[str]:
