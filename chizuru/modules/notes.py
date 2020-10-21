@@ -2,14 +2,14 @@ import re, ast
 from io import BytesIO
 from typing import Optional
 
-import lynda.modules.sql.notes_sql as sql
-from lynda import LOGGER, MESSAGE_DUMP, dispatcher
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import user_admin, connection_status
-from lynda.modules.helper_funcs.misc import (build_keyboard,
+import chizuru.modules.sql.notes_sql as sql
+from chizuru import LOGGER, MESSAGE_DUMP, dispatcher
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import user_admin, connection_status
+from chizuru.modules.helper_funcs.misc import (build_keyboard,
                                                     revert_buttons)
-from lynda.modules.helper_funcs.msg_types import get_note_type
-from lynda.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
+from chizuru.modules.helper_funcs.msg_types import get_note_type
+from chizuru.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
 from telegram import (MAX_MESSAGE_LENGTH, InlineKeyboardMarkup, Message,
                       ParseMode, Update)
 from telegram.error import BadRequest
@@ -160,8 +160,8 @@ def get(update, context, notename, show_none=True, no_format=False):
                     sql.rm_note(chat_id, notename)
                 else:
                     message.reply_text(
-                        "This note could not be sent, as it is incorrectly formatted. Ask in "
-                        f"@LyndaEagleSupport if you can't figure out why!")
+                        "This note could not be sent, as it is incorrectly formatted. Ask  "
+                        f"my master you can't figure out why!")
                     LOGGER.exception("Could not parse message #%s in chat %s",
                                      notename, str(chat_id))
                     LOGGER.warning("Message was: %s", str(note.value))
