@@ -12,14 +12,14 @@ from telegram import ParseMode, Update, MessageEntity, InlineKeyboardMarkup, Inl
 from telegram.ext import run_async, CommandHandler, CallbackQueryHandler, CallbackContext
 from telegram.utils.helpers import mention_html, mention_markdown
 
-from lynda import dispatcher, OWNER_ID, SUDO_USERS, WHITELIST_USERS, SARDEGNA_USERS, GBAN_LOGS, LOGGER
-from lynda.modules.helper_funcs.chat_status import is_user_admin
-from lynda.modules.helper_funcs.extraction import extract_user, extract_unt_fedban, extract_user_fban
-from lynda.modules.helper_funcs.string_handling import markdown_parser
-from lynda.modules.disable import DisableAbleCommandHandler
+from chizuru import dispatcher, OWNER_ID, SUDO_USERS, WHITELIST_USERS, SARDEGNA_USERS, GBAN_LOGS, LOGGER
+from chizuru.modules.helper_funcs.chat_status import is_user_admin
+from chizuru.modules.helper_funcs.extraction import extract_user, extract_unt_fedban, extract_user_fban
+from chizuru.modules.helper_funcs.string_handling import markdown_parser
+from chizuru.modules.disable import DisableAbleCommandHandler
 
-import lynda.modules.sql.feds_sql as sql
-from lynda.modules.helper_funcs.alternate import send_message
+import chizuru.modules.sql.feds_sql as sql
+from chizuru.modules.helper_funcs.alternate import send_message
 
 # Hello bot owner, I spended for feds many hours of my life,
 # Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
