@@ -1,10 +1,10 @@
 from asyncio import sleep
-from lynda.modules.helper_funcs.telethn.chatstatus import user_is_admin
-from lynda.modules.helper_funcs.telethn.chatstatus import can_delete_messages
-from lynda.lyn import lyndabot
+from chizuru.modules.helper_funcs.telethn.chatstatus import user_is_admin
+from chizuru.modules.helper_funcs.telethn.chatstatus import can_delete_messages
+from chizuru.lyn import chizurubot
 
 
-@lyndabot(pattern="^/purge")
+@chizurubot(pattern="^/purge")
 async def purge_messages(event):
     if event.from_id is None:
         return
@@ -40,7 +40,7 @@ async def purge_messages(event):
     await msg.delete()
 
 
-@lyndabot(pattern="^/del$")
+@chizurubot(pattern="^/del$")
 async def delete_messages(event):
     if event.from_id is None:
         return
