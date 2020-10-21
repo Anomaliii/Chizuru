@@ -4,7 +4,7 @@ from functools import wraps
 
 from telegram.ext import CallbackContext
 
-from lynda.modules.helper_funcs.misc import is_module_loaded
+from chizuru.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -14,9 +14,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, JobQueue, run_async
     from telegram.utils.helpers import escape_markdown
 
-    from lynda import GBAN_LOGS, LOGGER, dispatcher
-    from lynda.modules.helper_funcs.chat_status import user_admin
-    from lynda.modules.sql import log_channel_sql as sql
+    from chizuru import GBAN_LOGS, LOGGER, dispatcher
+    from chizuru.modules.helper_funcs.chat_status import user_admin
+    from chizuru.modules.sql import log_channel_sql as sql
 
     def loggable(func):
 
