@@ -2,8 +2,8 @@ import requests
 from telegram import Update, ParseMode
 from telegram.ext import run_async, CallbackContext
 
-from lynda import dispatcher
-from lynda.modules.disable import DisableAbleCommandHandler
+from chizuru import dispatcher
+from chizuru.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
