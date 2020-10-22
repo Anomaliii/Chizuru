@@ -5,8 +5,8 @@ import telegram
 from telegram import Update
 from telegram.ext import run_async, CallbackContext
 
-from lynda import dispatcher, LOGGER
-from lynda.modules.disable import DisableAbleRegexHandler
+from chizuru import dispatcher, LOGGER
+from chizuru.modules.disable import DisableAbleRegexHandler
 
 DELIMITERS = ("/", ":", "|", "_")
 
