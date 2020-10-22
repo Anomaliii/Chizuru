@@ -10,14 +10,14 @@ from telegram.error import BadRequest
 from telegram.ext import MessageHandler, Filters, CommandHandler, run_async, CallbackQueryHandler, JobQueue, CallbackContext
 from telegram.utils.helpers import mention_markdown, mention_html, escape_markdown
 
-import lynda.modules.sql.welcome_sql as sql
-from lynda import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS, SARDEGNA_USERS, WHITELIST_USERS, LOGGER, spam_watch
-from lynda.modules.helper_funcs.chat_status import user_admin, is_user_ban_protected
-from lynda.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from lynda.modules.helper_funcs.msg_types import get_welcome_type
-from lynda.modules.helper_funcs.string_handling import (
+import chizuru.modules.sql.welcome_sql as sql
+from chizuru import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS, SARDEGNA_USERS, WHITELIST_USERS, LOGGER, spam_watch
+from chizuru.modules.helper_funcs.chat_status import user_admin, is_user_ban_protected
+from chizuru.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from chizuru.modules.helper_funcs.msg_types import get_welcome_type
+from chizuru.modules.helper_funcs.string_handling import (
     markdown_parser, escape_invalid_curly_brackets)
-from lynda.modules.log_channel import loggable
+from chizuru.modules.log_channel import loggable
 
 VALID_WELCOME_FORMATTERS = [
     'first',
