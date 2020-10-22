@@ -1,7 +1,7 @@
 import threading
 
-from lynda import dispatcher
-from lynda.modules.sql import BASE, SESSION
+from chizuru import dispatcher
+from chizuru.modules.sql import BASE, SESSION
 from sqlalchemy import (Column, ForeignKey, Integer, String, UnicodeText,
                         UniqueConstraint, func)
 
