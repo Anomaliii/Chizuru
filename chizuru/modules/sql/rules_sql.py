@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, func, distinct
 
-from lynda.modules.sql import SESSION, BASE
+from chizuru.modules.sql import SESSION, BASE
 
 
 class Rules(BASE):
