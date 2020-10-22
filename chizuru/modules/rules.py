@@ -1,9 +1,9 @@
 from typing import Optional
 
-import lynda.modules.sql.rules_sql as sql
-from lynda import dispatcher
-from lynda.modules.helper_funcs.chat_status import user_admin
-from lynda.modules.helper_funcs.string_handling import markdown_parser
+import chizuru.modules.sql.rules_sql as sql
+from chizuru import dispatcher
+from chizuru.modules.helper_funcs.chat_status import user_admin
+from chizuru.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
