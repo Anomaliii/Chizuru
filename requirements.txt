@@ -34,4 +34,3 @@ nekos.py
 spamwatch
 telethon
 alphabet_detector
-AlphabetDetector
