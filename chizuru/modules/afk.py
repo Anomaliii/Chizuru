@@ -3,8 +3,7 @@ import random
 from telegram import Update, MessageEntity
 from telegram.ext import Filters, run_async, CallbackContext
 
-from chizuru
-import dispatcher
+from chizuru import dispatcher
 from chizuru.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleRegexHandler,
