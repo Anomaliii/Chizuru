@@ -5,10 +5,10 @@ from telegram import Update, ParseMode, MAX_MESSAGE_LENGTH
 from telegram.ext.dispatcher import run_async, CallbackContext
 from telegram.utils.helpers import escape_markdown
 
-import lynda.modules.sql.userinfo_sql as sql
-from lynda import dispatcher, SUDO_USERS, DEV_USERS
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.extraction import extract_user
+import chizuru.modules.sql.userinfo_sql as sql
+from chizuru import dispatcher, SUDO_USERS, DEV_USERS
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.extraction import extract_user
 
 
 @run_async
