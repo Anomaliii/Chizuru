@@ -1,9 +1,9 @@
 from functools import wraps
 
-from lynda import (DEL_CMDS, DEV_USERS, SUDO_USERS,
+from chizuru import (DEL_CMDS, DEV_USERS, SUDO_USERS,
                         SUPPORT_USERS, SARDEGNA_USERS, WHITELIST_USERS,
                         dispatcher)
-from lynda.memorize import MWT
+from chizuru.memorize import MWT
 from telegram import Chat, ChatMember, ParseMode, Update
 from telegram.ext import CallbackContext
 
