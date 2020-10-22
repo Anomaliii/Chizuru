@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String
 
-from lynda.modules.sql import BASE, SESSION
+from chizuru.modules.sql import BASE, SESSION
 
 
 class LastFMUsers(BASE):
