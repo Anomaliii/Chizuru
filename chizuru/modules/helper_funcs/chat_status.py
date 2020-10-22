@@ -141,7 +141,7 @@ def whitelist_plus(func):
             return func(update, context, *args, **kwargs)
         else:
             update.effective_message.reply_text(
-                f"You don't have access to use this.\nVisit @LyndaEagleSupport")
+                f"You don't have access to use this.\nChat my master.")
 
     return is_whitelist_plus_func
 
@@ -356,6 +356,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from lynda.modules import connection
+from chizuru.modules import connection
 
 connected = connection.connected
