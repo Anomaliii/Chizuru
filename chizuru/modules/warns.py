@@ -9,16 +9,16 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, DispatcherHandlerStop, MessageHandler, Filters, CallbackQueryHandler, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from lynda import dispatcher, BAN_STICKER, WHITELIST_USERS, SARDEGNA_USERS
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import (
+from chizuru import dispatcher, BAN_STICKER, WHITELIST_USERS, SARDEGNA_USERS
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import (
     is_user_admin, bot_admin, user_admin_no_reply, user_admin, can_restrict)
-from lynda.modules.helper_funcs.extraction import extract_text, extract_user_and_text, extract_user
-from lynda.modules.helper_funcs.filters import CustomFilters
-from lynda.modules.helper_funcs.misc import split_message
-from lynda.modules.helper_funcs.string_handling import split_quotes
-from lynda.modules.log_channel import loggable
-from lynda.modules.sql import warns_sql as sql
+from chizuru.modules.helper_funcs.extraction import extract_text, extract_user_and_text, extract_user
+from chizuru.modules.helper_funcs.filters import CustomFilters
+from chizuru.modules.helper_funcs.misc import split_message
+from chizuru.modules.helper_funcs.string_handling import split_quotes
+from chizuru.modules.log_channel import loggable
+from chizuru.modules.sql import warns_sql as sql
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
@@ -71,7 +71,7 @@ def warn(
         for warn_reason in reasons:
             reply += f"\n - {html.escape(warn_reason)}"
 
-        message.bot.send_sticker(chat.id, BAN_STICKER)  # Lynda's sticker
+        message.bot.send_sticker(chat.id, BAN_STICKER)  # Chizuru's sticker
         keyboard = []
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
