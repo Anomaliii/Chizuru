@@ -9,7 +9,7 @@ from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, ParseMode, Update
 from telegram.error import TelegramError
 from telegram.ext import CallbackContext
 
-from lynda import NO_LOAD
+from chizuru import NO_LOAD
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
