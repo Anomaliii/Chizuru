@@ -3,7 +3,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from lynda.modules.sql import SESSION, BASE
+from chizuru.modules.sql import SESSION, BASE
 
 
 class Permissions(BASE):
