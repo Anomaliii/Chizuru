@@ -3,8 +3,8 @@ import threading
 from sqlalchemy import Column, String, UnicodeText, Integer, Boolean
 from telegram.error import BadRequest, Unauthorized
 
-from lynda import dispatcher
-from lynda.modules.sql import SESSION, BASE
+from chizuru import dispatcher
+from chizuru.modules.sql import SESSION, BASE
 
 
 class Federations(BASE):
