@@ -3,7 +3,7 @@ import threading
 from sqlalchemy import Integer, Column, String, UnicodeText, func, distinct, Boolean
 from sqlalchemy.dialects import postgresql
 
-from lynda.modules.sql import SESSION, BASE
+from chizuru.modules.sql import SESSION, BASE
 
 
 class Warns(BASE):
