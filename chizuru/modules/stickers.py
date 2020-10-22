@@ -13,9 +13,9 @@ from telegram import Update
 from telegram.ext import CommandHandler, run_async, CallbackContext
 from telegram.utils.helpers import escape_markdown
 
-from lynda import dispatcher
+from chizuru import dispatcher
 
-from lynda.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
