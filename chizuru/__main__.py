@@ -144,8 +144,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="👥 Add 
-                                       to your group", url="https://t.me/ChizuruChanBot?startgroup=new")],
+                [[InlineKeyboardButton(text="👥 Add to your group", url="https://t.me/ChizuruChanBot?startgroup=new")],
                 [InlineKeyboardButton(text="🙋 Support Group", url="https://t.me/joinchat/MCPZ_li6GFtEIh5OcvOOsA"),
                 InlineKeyboardButton(text="🚫 Global Logs", url="https://t.me/ChizuruGbanLog")],
                 [InlineKeyboardButton(text="❔ Help", url="https://t.me/ChizuruChanBot?start=help"),
