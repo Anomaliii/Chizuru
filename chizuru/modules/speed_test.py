@@ -2,9 +2,9 @@ import speedtest
 from telegram import Update, ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import run_async, CallbackQueryHandler
 
-from lynda import dispatcher, DEV_USERS
-from lynda.modules.disable import DisableAbleCommandHandler
-from lynda.modules.helper_funcs.chat_status import dev_plus
+from chizuru import dispatcher, DEV_USERS
+from chizuru.modules.disable import DisableAbleCommandHandler
+from chizuru.modules.helper_funcs.chat_status import dev_plus
 
 
 def convert(speed):
