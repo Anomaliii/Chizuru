@@ -165,17 +165,6 @@ def info(update: Update, context: CallbackContext):
 
 
 @run_async
-def ping(update: Update, _):
-    msg = update.effective_message
-    start_time = time.time()
-    message = msg.reply_text("Pinging...")
-    end_time = time.time()
-    ping_time = round((end_time - start_time) * 1000, 3)
-    message.edit_text("*Pong!!!*\n`{}ms`".format(ping_time),
-                    parse_mode=ParseMode.MARKDOWN)
-
-
-@run_async
 @user_admin
 def echo(update: Update, _):
     args = update.effective_message.text.split(None, 1)
@@ -239,7 +228,6 @@ dispatcher.add_handler(INFO_HANDLER)
 dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
 dispatcher.add_handler(STATS_HANDLER)
-dispatcher.add_handler(PING_HANDLER)
 
 __mod_name__ = "Misc"
 __command_list__ = ["id", "info", "echo"]
