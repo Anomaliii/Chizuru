@@ -34,3 +34,8 @@ nekos.py
 spamwatch
 telethon
 alphabet_detector
+pythonping
+gsearch
+datetime
+hurry
+hurry.filesize
